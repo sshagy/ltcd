@@ -19,3 +19,27 @@ def repeated_substring_pattern(s: str | list):
             return True  # , ptrn
     return False
   
+def find_peak_point(arr) :
+    """
+    need log(n)
+
+    >>> assert find_peak_point([ 1, 3, 20, 4, 1, 0 ]) == 20
+    """
+    n = len(arr)
+
+    # first or last element is peak element
+    if (n == 1) :
+      return 0
+    if (arr[0] >= arr[1]) :
+        return 0
+    if (arr[n - 1] >= arr[n - 2]) :
+        return n - 1
+  
+    # check for every other element
+    for i in range(1, n - 1) :
+  
+        # check if the neighbors are smaller
+        if (arr[i] >= arr[i - 1] and arr[i] >= arr[i + 1]) :
+            return i
+    
+    return None
