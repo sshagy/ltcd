@@ -20,7 +20,7 @@ def repeated_substring_pattern(s: str | list):
     return False
   
 def find_peak_point(arr) :
-    """
+    """https://www.geeksforgeeks.org/find-a-peak-in-a-given-array/
     need log(n)
 
     >>> assert find_peak_point([ 1, 3, 20, 4, 1, 0 ]) == 20
